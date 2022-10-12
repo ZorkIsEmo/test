@@ -1,5 +1,5 @@
 --------------------------------------------------------------------
 	if game.PlaceId == 5589789252 then
-            wait(1500)
+            wait(40)
                 game:GetService("ReplicatedStorage").SceptorTeleport:FireServer("BeachHouse")
 	end
