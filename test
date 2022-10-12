@@ -1,17 +1,24 @@
--- Animation Box
 
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-614, 99, -777)
-            wait(1)
-            
-            
-            while wait() do
-                for i,v in pairs(game.Workspace.AppleBobbing:GetDescendants()) do 
-                    if v.Name == "Attachment" then 
-                        fireproximityprompt(v.ProximityPrompt) 
-                    end
-                end
-                
-                for _,v in next, game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Animator:GetPlayingAnimationTracks() do
-                    v:AdjustSpeed(300)
-                end 
-            end
+repeat task.wait() until game:IsLoaded()
+    wait(10)
+    if game.PlaceId ~= 5589789252 then 
+        game:GetService("ReplicatedStorage").SceptorTeleport:FireServer("Wickery Cliffs")
+    end
+------------------------------------------------------------------------------------------------------
+    			wait(0.5)
+			
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-614, 99, -777)
+			wait(1)
+			repeat
+				wait()
+				for i,v in pairs(game.Workspace.AppleBobbing:GetDescendants()) do 
+					if v.Name == "Attachment" then 
+						fireproximityprompt(v.ProximityPrompt) 
+					end
+				end
+	
+			
+				for _,v in next, game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Animator:GetPlayingAnimationTracks() do
+					v:AdjustSpeed(300)
+				end
+			until false
