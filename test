@@ -1,0 +1,17 @@
+-- Animation Box
+
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-614, 99, -777)
+            wait(1)
+            
+            
+            while wait() do
+                for i,v in pairs(game.Workspace.AppleBobbing:GetDescendants()) do 
+                    if v.Name == "Attachment" then 
+                        fireproximityprompt(v.ProximityPrompt) 
+                    end
+                end
+                
+                for _,v in next, game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Animator:GetPlayingAnimationTracks() do
+                    v:AdjustSpeed(300)
+                end 
+            end
